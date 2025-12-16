@@ -5,6 +5,14 @@ import os
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 ELEVEN_API_KEY = os.environ.get("ELEVENLABS_API_KEY")
 ELEVEN_VOICE_ID = os.environ.get("ELEVEN_VOICE_ID")
 

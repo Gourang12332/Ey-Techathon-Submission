@@ -196,6 +196,7 @@ const DashboardClient: React.FC = () => {
 
     while (attempt < maxRetries) {
       try {
+        console.log("We have tried");
         const res = await fetch(`${API_URL}?vehicleId=${vehicleId}`);
         if (!res.ok) throw new Error(`API returned status ${res.status}`);
 
