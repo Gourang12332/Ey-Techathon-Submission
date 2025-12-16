@@ -1,11 +1,12 @@
 from fastapi import FastAPI, Response
 from pydantic import BaseModel
 import requests
+import os
 
 app = FastAPI()
 
-ELEVEN_API_KEY = "YOUR_ELEVENLABS_API_KEY"
-ELEVEN_VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
+ELEVEN_API_KEY = os.environ.get("ELEVENLABS_API_KEY")
+ELEVEN_VOICE_ID = os.environ.get("ELEVEN_VOICE_ID")
 
 class SpeakRequest(BaseModel):
     text: str

@@ -29,7 +29,7 @@ export default function Dashboard() {
 
   const fetchPrediction = async () => {
     const res = await fetch(
-      `https://YOUR_PREDICT_WEBHOOK/predict?vehicleId=${vehicleId}`
+      `https://prediction-32w1.onrender.com/predict?vehicleId=${vehicleId}`
     );
     const json = await res.json();
     setData(json);
