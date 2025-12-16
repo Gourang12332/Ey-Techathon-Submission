@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 
 const VEHICLES = ["XYZ789", "LMN456", "PQR999"];
